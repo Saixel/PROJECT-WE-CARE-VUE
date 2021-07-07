@@ -15,7 +15,7 @@
         Learn More
       </v-btn>
       <v-spacer></v-spacer>
-      <v-btn text color="teal accent-6">Ir a la ficha</v-btn>
+      <v-btn class="text-decoration-none" text color="teal accent-6"><router-link :to="{ name: 'Package' }">Ir a la ficha</router-link></v-btn>
     </v-card-actions>
 
     <v-expand-transition>

@@ -13,7 +13,6 @@
         rounded
         class="my-2"
       >
-        <!-- `/` + link" -->
         <router-link :to="{ name: link }">{{ link }}</router-link>
       </v-btn>
 
