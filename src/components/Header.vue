@@ -46,7 +46,7 @@
 <script>
 export default {
   data: () => ({
-    links: ["Home", "News", "Content", "Professionals"],
+    links: ["Home", "News", "Contents", "Professionals"],
   }),
 };
 </script>
