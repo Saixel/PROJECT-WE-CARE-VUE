@@ -13,13 +13,14 @@
 
       <v-list-item-avatar tile size="80" color="grey">
         <v-img
-          src="https://www.technologyspeakers.com/storage/celebrities/no_img.png"
+          :src="professional.image"
         ></v-img>
       </v-list-item-avatar>
-    </v-list-item>
-
+    </v-list-item>    
     <v-card-actions>
-      <v-btn outlined rounded text>PROFILE</v-btn>
+      <router-link :to="{name: 'ProfessionalProfile'}" class="text-decoration-none">
+        <v-btn outlined rounded text>PROFILE</v-btn>
+      </router-link>
     </v-card-actions>
   </v-card>
 </template>
