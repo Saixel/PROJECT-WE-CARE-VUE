@@ -13,7 +13,7 @@
         rounded
         class="my-2"
       >
-        <router-link :to="`/` + link">{{ link }}</router-link>
+        <router-link :to="{ name: link }">{{ link }}</router-link>
       </v-btn>
 
       <v-spacer></v-spacer>
@@ -46,7 +46,7 @@
 <script>
 export default {
   data: () => ({
-    links: ["home", "news", "content", "professionals"],
+    links: ["Home", "News", "Content", "Professionals"],
   }),
 };
 </script>
