@@ -10,19 +10,25 @@
       </div>
     </v-card-text>
 
-    <v-card-actions >
+    <v-card-actions>
       <v-btn text color="teal accent-4" @click="reveal = true">
         Learn More
       </v-btn>
       <v-spacer></v-spacer>
-      <v-btn class="text-decoration-none" text color="teal accent-6"><router-link :to="{ name: 'Package' }">Ir a la ficha</router-link></v-btn>
+      <v-btn text color="teal accent-6"
+        ><router-link
+          :to="{ name: 'Package' }"
+          style="text-decoration: none; color: inherit"
+          >Ir a la ficha</router-link
+        ></v-btn
+      >
     </v-card-actions>
 
     <v-expand-transition>
       <v-card
         v-if="reveal"
         class="transition-fast-in-fast-out v-card--reveal"
-        style="height: 100%;"
+        style="height: 100%"
       >
         <v-list-item class="d-flex">
           <v-list-item-content class="align-self-start pt-4">
@@ -31,9 +37,7 @@
           </v-list-item-content>
 
           <v-list-item-avatar tile size="80" color="grey">
-              <v-img
-              src="../assets/markito.jpg"
-            ></v-img>
+            <v-img src="../assets/markito.jpg"></v-img>
           </v-list-item-avatar>
         </v-list-item>
 
@@ -46,14 +50,12 @@
             Close
           </v-btn>
           <v-spacer></v-spacer>
-      <v-btn text color="teal accent-6">Ir al profecional</v-btn>
+          <v-btn text color="teal accent-6">Ir al profesional</v-btn>
         </v-card-actions>
       </v-card>
     </v-expand-transition>
   </v-card>
 </template>
-
-
 
 <script>
 export default {
@@ -72,7 +74,6 @@ export default {
   },
 };
 </script>
-
 
 <style scoped>
 .v-card--reveal {
