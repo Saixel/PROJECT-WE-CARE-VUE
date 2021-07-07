@@ -1,7 +1,8 @@
 <template>
   <div>
     <v-app-bar color="primary lighten-1" dark>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>      
+      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+
       <v-toolbar-title>WE CARE</v-toolbar-title>
 
       <v-btn
@@ -12,7 +13,7 @@
         rounded
         class="my-2"
       >
-        <router-link :to="`/` + link">{{ link }}</router-link>
+        <router-link :to="{ name: link }">{{ link }}</router-link>
       </v-btn>
 
       <v-spacer></v-spacer>
@@ -39,46 +40,13 @@
         </v-list>
       </v-menu>
     </v-app-bar>
-    <v-navigation-drawer
-      v-model="drawer"
-      absolute
-      bottom
-      temporary
-    >
-      <v-list
-        nav
-        dense
-      >
-        <v-list-item-group
-          v-model="group"
-          active-class="deep-purple--text text--accent-4"
-        >
-          <v-list-item>
-            <v-list-item-title>Foo</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-title>Bar</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-title>Fizz</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-title>Buzz</v-list-item-title>
-          </v-list-item>
-        </v-list-item-group>
-      </v-list>
-    </v-navigation-drawer>    
   </div>
 </template>
 
 <script>
 export default {
   data: () => ({
-    links: ["home", "news", "content", "professionals"],
-    drawer: null,
+    links: ["Home", "News", "Contents", "Professionals"],
   }),
 };
 </script>
