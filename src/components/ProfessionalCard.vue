@@ -12,15 +12,16 @@
       </v-list-item-content>
 
       <v-list-item-avatar tile size="80" color="grey">
-        <v-img
-          :src="professional.image"
-        ></v-img>
+        <v-img :src="professional.image"></v-img>
       </v-list-item-avatar>
-    </v-list-item>    
+    </v-list-item>
     <v-card-actions>
-      <router-link :to="{name: 'ProfessionalProfile'}" class="text-decoration-none">
-        <v-btn outlined rounded text>PROFILE</v-btn>
-      </router-link>
+      <!-- <router-link
+        :to="{ name: 'ProfessionalProfile' }"
+        class="text-decoration-none"
+      > -->
+      <v-btn outlined rounded text>PROFILE</v-btn>
+      <!-- </router-link> -->
     </v-card-actions>
   </v-card>
 </template>

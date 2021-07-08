@@ -59,17 +59,19 @@
 
 <script>
 export default {
+  name: "ContentCard",
   data: () => ({
     loading: false,
     selection: 1,
     reveal: false,
   }),
-
   methods: {
     reserve() {
       this.loading = true;
-
       setTimeout(() => (this.loading = false), 2000);
+    },
+    props: {
+      content: Object,
     },
   },
 };
