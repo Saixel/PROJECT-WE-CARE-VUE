@@ -39,6 +39,7 @@ const routes = [
     path: "/package",
     name: "Package",
     component: Package,
+    props: true,
   },
   {
     path: "/about",
