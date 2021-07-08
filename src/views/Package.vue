@@ -1,12 +1,11 @@
 <template>
   <v-container class="mx-0" fluid>
     <v-row class="d-flex justify-center">
-      <v-col xs="12" sm="6" md="6" lg="6">
+      <v-col xs="12" sm="6">
         <v-card height="420">
           <v-card-title>{{ content.title }}</v-card-title>
-          <v-card-subtitle>Lorem ipsum</v-card-subtitle>
-          <v-card-text>Lorem ipsum</v-card-text>
-          <v-card-actions>Lorem ipsum</v-card-actions>
+          <v-card-subtitle>{{ content.description }}</v-card-subtitle>
+          <v-card-text>Espacio reservado para contenido adicional</v-card-text>
         </v-card>
       </v-col>
 
@@ -45,7 +44,7 @@
                     {{ content.price.toUpperCase() }}
                   </v-chip>
                 </h2>
-                <v-btn color="primary">Comprar ahora</v-btn>
+                <v-btn color="primary">Comprar</v-btn>
               </v-col>
             </v-row>
           </v-container>

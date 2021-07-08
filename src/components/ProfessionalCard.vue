@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-auto" max-width="400" outlined>
+  <v-card class="mx-auto rounded-lg" max-width="400" outlined style="background: #f0f8ff">
     <v-list-item three-line>
       <v-list-item-content>
         <div class="text-overline mb-4">PROFESSIONAL</div>

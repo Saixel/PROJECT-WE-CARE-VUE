@@ -1,11 +1,11 @@
 <template>
-  <v-container v-if="professionals">
+  <v-container v-if="professionals" class="py-10">
     <v-row>
       <v-col
         v-for="(professional, idx) in professionals"
         :key="idx"
         sm="6"
-        lg="4"
+        lg="4"       
       >
         <ProfessionalCard
           :professional="professional"

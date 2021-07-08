@@ -59,7 +59,10 @@
           </v-list-item-content>
 
           <v-list-item-avatar tile size="80">
-            <v-img src="../assets/profile1.png"></v-img>
+            <v-avatar size="80">
+              <v-img src="../assets/alexprofile1.jpg"></v-img>
+            </v-avatar>
+            <!-- <v-img src="../assets/profile1.png"></v-img> -->
           </v-list-item-avatar>
         </v-list-item>
 
