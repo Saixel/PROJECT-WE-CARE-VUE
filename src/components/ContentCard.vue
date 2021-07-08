@@ -2,7 +2,7 @@
   <v-card
     :loading="loading"
     class="mx-auto my-12 rounded-lg"
-    max-width="400"
+    max-width="450"
     style="background: #f0f8ff"
   >
     <v-card-title
