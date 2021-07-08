@@ -1,31 +1,21 @@
 <template>
-  <v-container class="mx-0" fluid>
-    <v-row class="d-flex justify-center">
-      <v-col xs="12" sm="6" md="6" lg="6" style="background-color: blue">
-        <v-sheet rounded="lg" elevation="2">
-          <v-card>
-            <v-card-title>{{ content.title }}</v-card-title>
-            <v-card-subtitle>Lorem ipsum</v-card-subtitle>
-            <v-card-text>Lorem ipsum</v-card-text>
-            <v-card-actions>Lorem ipsum</v-card-actions>
-          </v-card>
-        </v-sheet>
+  <v-container  class="mx-0" fluid >
+    <v-row class="d-flex justify-center" >
+      <v-col xs="12" sm="6" md="6" lg="6"  >
+        <v-card :key="idx" height="515" >
+          <v-card-title>{{ content.title }}</v-card-title>
+          <v-card-subtitle>Lorem ipsum</v-card-subtitle>
+          <v-card-text>Lorem ipsum</v-card-text>
+          <v-card-actions>Lorem ipsum</v-card-actions>
+        </v-card>
       </v-col>
 
-      <v-col xs="12" sm="4" md="3" lg="2" style="background-color: green">
+      <v-col xs="12" sm="4" md="3" lg="2" >
         <v-sheet rounded="lg" min-height="268">
-          <v-card>
+          <v-card >
             <v-img height="250" src="../assets/markito.jpg"></v-img>
 
-            <v-card-title>GRATIS - €</v-card-title>
-            <v-container fluid justify="center">
-              <v-row align="center" justify="center">
-                <v-col class="d-flex justify-center">
-                  <!-- class="ma-2 mt-n6" color="warning" dark -->
-                  <v-btn> Comprar ahora </v-btn>
-                </v-col>
-              </v-row>
-            </v-container>
+            <v-card-title>{{ content.author.name }}</v-card-title>
             <v-card-text>
               <v-row align="center" class="mx-0">
                 <v-rating
@@ -40,19 +30,34 @@
                 <div class="grey--text ms-4">4.5 (413)</div>
               </v-row>
 
-              <div class="my-4 text-subtitle-1">$ • Italian, Cafe</div>
+              <!-- <div class="my-4 text-subtitle-1">$ • Italian, Cafe</div> -->
 
-              <div>
-                Small plates, salads & sandwiches - an intimate setting with 12
-                indoor seats plus patio seating.
+              <div class="mt-4">
+                {{ content.author.description }}
               </div>
             </v-card-text>
+            <v-container>
+              <v-row>
+                <v-col class="d-flex justify-space-between">
+                  <!-- class="ma-2 mt-n6" color="warning" dark -->
+                  <h2>
+                    <v-chip color="green lighten-3">
+                      {{ content.price.toUpperCase() }}
+                    </v-chip>
+                  </h2>
+                  <v-btn color="error"> Comprar ahora </v-btn>
+                </v-col>
+              </v-row>
+            </v-container>
 
             <v-divider class="mx-4"></v-divider>
           </v-card>
         </v-sheet>
       </v-col>
     </v-row>
+
+    <!-- NO TOCAR SALVO QUE SEAS ALEXIS :) -->
+
     <v-row class="d-flex justify-center">
       <v-sheet>
         <v-expansion-panels>
@@ -94,4 +99,5 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+</style>
