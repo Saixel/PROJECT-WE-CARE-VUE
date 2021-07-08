@@ -1,0 +1,20 @@
+[
+  {
+    "username": "jondoe",
+    "email": "johndoe@gmail.com",
+    "password": "j0hnd03",
+    "role": "professional",
+    "name": "John Doe",
+    "image": "https://www.technologyspeakers.com/storage/celebrities/no_img.png",
+    "description": "A mysterious guy. That's all I can say"        
+  },
+  {
+    "username": "Walter",
+    "email": "johndoe@gmail.com",
+    "password": "j0hnd03",
+    "role": "professional",
+    "name": "Markito Doggo Navarro",
+    "image": "https://images.uncyclomedia.co/uncyclopedia/en/thumb/3/37/WalterTheDog3.jpg/300px-WalterTheDog3.jpg",
+    "description": "Un perrete que aspira al puesto de docente"
+  }
+]

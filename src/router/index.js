@@ -1,9 +1,11 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import Professionals from '../views/Professionals.vue'
-import Contents from '../views/Contents.vue'
-import Package from '../views/Package.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Home from "../views/Home.vue";
+import Professionals from "../views/Professionals.vue";
+import Contents from "../views/Contents.vue";
+import Package from "../views/Package.vue";
+import ProfessionalProfile from "../views/ProfessionalProfile.vue";
+import News from "../views/News.vue";
 
 Vue.use(VueRouter)
 
@@ -14,9 +16,19 @@ const routes = [
     component: Home
   },
   {
-    path: '/professionals',
-    name: 'Professionals',
-    component: Professionals
+    path: "/news",
+    name: "News",
+    component: News,
+  },
+  {
+    path: "/profile",
+    name: "ProfessionalProfile",
+    component: ProfessionalProfile,
+  },
+  {
+    path: "/professionals",
+    name: "Professionals",
+    component: Professionals,
   },
   {
     path: '/contents',
@@ -24,9 +36,10 @@ const routes = [
     component: Contents
   },
   {
-    path: '/package',
-    name: 'Package',
-    component: Package
+    path: "/package",
+    name: "Package",
+    component: Package,
+    props: true,
   },
   {
     path: '/about',

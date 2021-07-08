@@ -3,7 +3,7 @@
     <v-row class="d-flex justify-center">
       <v-col xs="12" md="7" lg="6">
         <v-sheet min-height="70vh" rounded="lg" elevation="2">
-          <h1>qw</h1>
+          <h1>qwqqwqwqwqwqwqwqwqwqw</h1>
         </v-sheet>
       </v-col>
 
@@ -48,8 +48,6 @@
             </v-card-text>
 
             <v-divider class="mx-4"></v-divider>
-
-
           </v-card>
         </v-sheet>
       </v-col>
@@ -61,5 +59,4 @@
 export default {};
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
