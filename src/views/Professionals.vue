@@ -34,6 +34,7 @@ export default {
   },
   async mounted() {
     this.professionals = await userService.getProfessionals();
+    console.log('HOLAAAAAA>', this.professionals)
     // this.professionals = professionalsList
   },
 };

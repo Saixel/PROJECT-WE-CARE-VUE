@@ -24,6 +24,7 @@ export default {
   },
   async mounted() {
     this.contents = await contentService.getPackages();
+    console.log('------->', this.contents)
   },
 };
 </script>
