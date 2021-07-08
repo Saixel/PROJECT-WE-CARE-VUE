@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar color="primary lighten-1" dark>
+    <v-app-bar color="primary lighten-1" dark app>
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
       <v-toolbar-title>WE CARE</v-toolbar-title>

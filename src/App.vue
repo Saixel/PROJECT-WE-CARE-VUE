@@ -23,3 +23,11 @@ export default {
   }),
 };
 </script>
+
+<style>
+#app {
+  background-image: url("./assets/background01.png") !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>

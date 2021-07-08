@@ -1,7 +1,7 @@
 <template>
   <v-container class="mx-0" fluid>
     <v-row class="d-flex justify-center">
-      <v-col xs="12" sm="6" md="6" lg="6" style="background-color: blue">
+      <v-col xs="12" sm="6" md="6" lg="6">
         <v-sheet rounded="lg" elevation="2">
           <v-card>
             <v-card-title>{{ content.title }}</v-card-title>
@@ -12,7 +12,7 @@
         </v-sheet>
       </v-col>
 
-      <v-col xs="12" sm="4" md="3" lg="2" style="background-color: green">
+      <v-col xs="12" sm="4" md="3" lg="2">
         <v-sheet rounded="lg" min-height="268">
           <v-card>
             <v-img height="250" src="../assets/markito.jpg"></v-img>
@@ -54,33 +54,41 @@
       </v-col>
     </v-row>
     <v-row class="d-flex justify-center">
-      <v-sheet>
-        <v-expansion-panels>
-          <v-expansion-panel
-            v-for="(item, i) in content.content.length"
-            :key="i"
-          >
-            <v-expansion-panel-header>{{
-              content.content[i].title
-            }}</v-expansion-panel-header>
-            <v-expansion-panel-content>
-              <v-list-item>
-                <v-list-item-content>
-                  <v-list-item-title>{{
-                    content.content[i].description
-                  }}</v-list-item-title>
-                  <v-list-item-title>{{
-                    content.content[i].instructions
-                  }}</v-list-item-title>
-                  <v-list-item-title>{{
-                    content.content[i].phrase
-                  }}</v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
-            </v-expansion-panel-content>
-          </v-expansion-panel>
-        </v-expansion-panels>
-      </v-sheet>
+      <v-col cols="8">
+        <v-sheet>
+          <v-expansion-panels focusable>
+            <v-expansion-panel
+              v-for="(item, i) in content.content.length"
+              :key="i"
+            >
+              <v-expansion-panel-header>
+                {{ content.content[i].title }}
+                <template v-slot:actions>
+                  <v-icon color="primary"> $expand </v-icon>
+                </template>
+              </v-expansion-panel-header>
+              <v-expansion-panel-content style="background: #f0f8ff">
+                <v-list-item>
+                  <v-list-item-content>
+                    <v-list-item-title>{{
+                      content.content[i].description
+                    }}</v-list-item-title>
+                    <v-list-item-title>{{
+                      content.content[i].instructions
+                    }}</v-list-item-title>
+                    <v-list-item-title>{{
+                      content.content[i].phrase
+                    }}</v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+                <v-text-field
+                  label="Ordena las palabras para formar una frase"
+                ></v-text-field>
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+          </v-expansion-panels>
+        </v-sheet>
+      </v-col>
     </v-row>
   </v-container>
 </template>
