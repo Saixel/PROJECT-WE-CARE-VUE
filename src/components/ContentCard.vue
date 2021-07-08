@@ -1,14 +1,23 @@
 <template>
-  <v-card :loading="loading" class="mx-auto my-12 rounded-lg" max-width="374">
-    <v-card-title>{{ content.title }} <v-spacer></v-spacer> <v-chip color="green lighten-3">{{ content.price.toUpperCase() }}</v-chip></v-card-title>
+  <v-card
+    :loading="loading"
+    class="mx-auto my-12 rounded-lg"
+    max-width="400"
+    style="background: #f0f8ff"
+  >
+    <v-card-title
+      >{{ content.title }} <v-spacer></v-spacer>
+      <!-- color="green lighten-3" -->
+      <v-chip v-bind:color="content.price == 'free'?'green' : '#1E90FF'">{{
+        content.price.toUpperCase()
+      }}</v-chip></v-card-title
+    >
     <v-card-subtitle>{{ content.author.name }}</v-card-subtitle>
     <!-- {{content.collective}} -->
     <!-- <span color="blue lighten-3" class="ms-4" v-for="(colle, i) in content.collective" :key="i">
       <v-chip>{{ colle[0] }}</v-chip>
     </span> -->
-    <v-card-subtitle>
-      
-    </v-card-subtitle>
+    <v-card-subtitle> </v-card-subtitle>
     <v-divider class="mx-4 mt-n4"></v-divider>
     <v-card-text style="height: 10vh">
       <div>
@@ -17,9 +26,7 @@
     </v-card-text>
 
     <v-card-actions>
-      <v-btn text color="blue darken-1" @click="reveal = true">
-        ver más
-      </v-btn>
+      <v-btn text color="blue darken-1" @click="reveal = true"> ver más </v-btn>
       <v-spacer></v-spacer>
       <v-btn text color="blue darken-4"
         ><router-link
