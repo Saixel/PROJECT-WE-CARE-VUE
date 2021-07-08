@@ -1,21 +1,27 @@
 <template>
   <v-card :loading="loading" class="mx-auto my-12 rounded-lg" max-width="374">
-    <v-card-title>{{ content.title }}</v-card-title>
+    <v-card-title>{{ content.title }} <v-spacer></v-spacer> <v-chip color="green lighten-3">{{ content.price.toUpperCase() }}</v-chip></v-card-title>
     <v-card-subtitle>{{ content.author.name }}</v-card-subtitle>
-    <v-card-subtitle>{{ content.price }}</v-card-subtitle>
-    <v-divider class="mx-4"></v-divider>
-    <v-card-text>
+    <!-- {{content.collective}} -->
+    <!-- <span color="blue lighten-3" class="ms-4" v-for="(colle, i) in content.collective" :key="i">
+      <v-chip>{{ colle[0] }}</v-chip>
+    </span> -->
+    <v-card-subtitle>
+      
+    </v-card-subtitle>
+    <v-divider class="mx-4 mt-n4"></v-divider>
+    <v-card-text style="height: 10vh">
       <div>
         {{ content.description }}
       </div>
     </v-card-text>
 
     <v-card-actions>
-      <v-btn text color="teal accent-4" @click="reveal = true">
-        Learn More
+      <v-btn text color="blue darken-1" @click="reveal = true">
+        ver más
       </v-btn>
       <v-spacer></v-spacer>
-      <v-btn text color="teal accent-6"
+      <v-btn text color="blue darken-4"
         ><router-link
           :to="{
             params: {
@@ -39,10 +45,14 @@
           <v-list-item-content class="align-self-start pt-4">
             <h2>{{ content.author.name }}</h2>
             <!-- <h4 class="grey--text">-Luchar es el primer paso al triunfo-</h4> -->
+            <!--VVV mostrar los colevtivos en los que se especializa el autor del paquete VVV-->
+            <!-- <div class="mt-2" v-if="content.author.collective.length >= 1">
+              <v-chip color="blue lighten-3" :v-for="(collective, i) in content.author.collective" :key="i">{{collective}}</v-chip>
+            </div> -->
           </v-list-item-content>
 
-          <v-list-item-avatar tile size="80" color="grey">
-            <v-img src="../assets/markito.jpg"></v-img>
+          <v-list-item-avatar tile size="80">
+            <v-img src="../assets/profile1.png"></v-img>
           </v-list-item-avatar>
         </v-list-item>
 
@@ -51,11 +61,11 @@
           <p>{{ content.author.description }}</p>
         </v-card-text>
         <v-card-actions class="pt-0">
-          <v-btn text color="teal accent-4" @click="reveal = false">
-            Close
+          <v-btn text color="blue darken-1" @click="reveal = false">
+            Cerrar
           </v-btn>
           <v-spacer></v-spacer>
-          <v-btn text color="teal accent-6">Ir al profesional</v-btn>
+          <v-btn text color="blue darken-4">Ir al profesional</v-btn>
         </v-card-actions>
       </v-card>
     </v-expand-transition>
