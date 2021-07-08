@@ -5,7 +5,7 @@ import Professionals from "../views/Professionals.vue";
 import Contents from "../views/Contents.vue";
 import Package from "../views/Package.vue";
 import ProfessionalProfile from "../views/ProfessionalProfile.vue";
-
+import News from "../views/News.vue";
 
 Vue.use(VueRouter);
 
@@ -14,6 +14,11 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+  },
+  {
+    path: "/news",
+    name: "News",
+    component: News,
   },
   {
     path: "/profile",
