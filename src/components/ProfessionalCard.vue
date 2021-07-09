@@ -20,7 +20,7 @@
         :to="{ name: 'ProfessionalProfile' }"
         class="text-decoration-none"
       > -->
-      <v-btn outlined rounded text>PROFILE</v-btn>
+      <v-btn outlined rounded>PROFILE</v-btn>
       <!-- </router-link> -->
     </v-card-actions>
   </v-card>

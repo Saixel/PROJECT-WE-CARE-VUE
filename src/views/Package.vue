@@ -3,9 +3,19 @@
     <v-row class="d-flex justify-center">
       <v-col xs="12" sm="6">
         <v-card height="420">
-          <v-card-title>{{ content.title }}</v-card-title>
-          <v-card-subtitle>{{ content.description }}</v-card-subtitle>
-          <v-card-text>Espacio reservado para contenido adicional</v-card-text>
+          <v-card-title style="background: #f0f8ff"
+            ><strong>{{ content.title }}</strong></v-card-title
+          >
+          <v-divider></v-divider>
+          <v-card-text>
+            <div class="text--primary">
+              {{ content.description }}
+            </div>
+          </v-card-text>
+          <v-card-text
+            >Espacio reservado para contenido adicional e indicaciones del
+            profesional.</v-card-text
+          >
         </v-card>
       </v-col>
 
@@ -48,7 +58,6 @@
               </v-col>
             </v-row>
           </v-container>
-
         </v-card>
         <!-- </v-sheet> -->
       </v-col>
@@ -59,10 +68,11 @@
     <v-row class="d-flex justify-center">
       <v-col cols="8">
         <v-sheet>
-          <v-expansion-panels focusable>
+          <v-expansion-panels>
             <v-expansion-panel
               v-for="(item, i) in content.content.length"
               :key="i"
+              style="background: #f0f8ff"
             >
               <v-expansion-panel-header>
                 {{ content.content[i].title }}
@@ -70,16 +80,26 @@
                   <v-icon color="primary"> $expand </v-icon>
                 </template>
               </v-expansion-panel-header>
-              <v-expansion-panel-content style="background: #f0f8ff">
+              <v-expansion-panel-content style="background: white">
+                {{ content.content[i].instructions }}
                 <v-list-item>
                   <v-list-item-content>
-                    <v-list-item-title>{{
-                      content.content[i].description
-                    }}</v-list-item-title>
-                    <v-list-item-title>{{
-                      content.content[i].instructions
-                    }}</v-list-item-title>
                     <v-list-item-title>
+                      <v-chip color="blue lighten-3" class="mr-3"
+                        ><strong>tres</strong></v-chip
+                      >
+                      <v-chip color="blue lighten-3" class="mr-2"
+                        ><strong>gallina</strong></v-chip
+                      >
+                      <v-chip color="blue lighten-3" class="mr-2"
+                        ><strong>puso</strong></v-chip
+                      >
+                      <v-chip color="blue lighten-3" class="mr-2"
+                        ><strong>La</strong></v-chip
+                      >
+                      <v-chip color="blue lighten-3" class="mr-2"
+                        ><strong>huevos</strong></v-chip
+                      >
                       <!-- <v-chip
                         v-for="(word, n) in content.content[i].pieces"
                         :key="n"

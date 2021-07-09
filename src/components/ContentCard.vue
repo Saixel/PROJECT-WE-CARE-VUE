@@ -1,22 +1,21 @@
 <template>
   <v-card
     :loading="loading"
-    class="mx-auto my-12 rounded-lg"
+    class="mx-auto mt-6 rounded-lg"
     max-width="450"
     style="background: #f0f8ff"
   >
     <v-card-title
       >{{ content.title }} <v-spacer></v-spacer>
       <!-- color="green lighten-3" -->
-      <v-chip v-bind:color="content.price == 'free'?'green' : '#1E90FF'">{{
+      <v-chip v-bind:color="content.price == 'free' ? 'green' : '#1E90FF'">{{
         content.price.toUpperCase()
       }}</v-chip></v-card-title
     >
     <v-card-subtitle>{{ content.author.name }}</v-card-subtitle>
-    <!-- {{content.collective}} -->
-    <!-- <span color="blue lighten-3" class="ms-4" v-for="(colle, i) in content.collective" :key="i">
-      <v-chip>{{ colle[0] }}</v-chip>
-    </span> -->
+    <span class="ms-4" v-for="(colle, i) in content.collective" :key="i">
+      <v-chip color="blue lighten-3">{{ colle.name }}</v-chip>
+    </span>
     <v-card-subtitle> </v-card-subtitle>
     <v-divider class="mx-4 mt-n4"></v-divider>
     <v-card-text style="height: 10vh">
